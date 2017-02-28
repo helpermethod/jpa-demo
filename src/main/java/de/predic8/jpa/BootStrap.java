@@ -18,6 +18,6 @@ public class BootStrap implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(authorRepository.findAll());
+        System.out.println(authorRepository.authorsWithPosts());
     }
 }

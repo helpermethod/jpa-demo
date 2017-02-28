@@ -9,7 +9,7 @@ public class Author {
     @GeneratedValue
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "author")
     private List<Post> posts;
 
     public String getName() {
