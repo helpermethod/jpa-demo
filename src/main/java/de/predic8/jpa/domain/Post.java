@@ -55,7 +55,6 @@ public class Post {
         return "Post{" +
                 "title='" + title + '\'' +
                 ", content='" + content + '\'' +
-                ", author=" + author +
                 '}';
     }
 }
