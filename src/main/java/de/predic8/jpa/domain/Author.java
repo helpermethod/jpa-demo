@@ -30,4 +30,11 @@ public class Author {
     public void setPosts(List<Post> posts) {
         this.posts = posts;
     }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

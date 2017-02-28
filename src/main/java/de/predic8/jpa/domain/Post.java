@@ -49,4 +49,13 @@ public class Post {
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", author=" + author +
+                '}';
+    }
 }
