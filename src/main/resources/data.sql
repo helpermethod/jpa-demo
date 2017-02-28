@@ -1,0 +1,2 @@
+INSERT INTO author (id, name) VALUES (1, 'Oliver Weiler');
+INSERT INTO post (id, title, content, author_id) VALUES (1, 'What is Spring Boot?', 'Spring Boot makes it easy TO CREATE stand - alone, production - grade Spring based Applications that you can "just run"', 1);
