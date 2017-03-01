@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface AuthorRepository extends JpaRepository<Author, Long> {
     @Query("select a from Author a left join fetch a.posts")
-    List<Author> authorsWithPosts();
+    List<Author> fetchAuthorsWithPosts();
 }

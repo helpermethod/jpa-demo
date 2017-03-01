@@ -1,5 +1,7 @@
 package de.predic8.jpa.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -9,6 +11,7 @@ public class Author {
     @GeneratedValue
     private Long id;
     private String name;
+    @JsonManagedReference
     @OneToMany(mappedBy = "author")
     private List<Post> posts;
 

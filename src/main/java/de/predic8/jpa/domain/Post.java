@@ -1,5 +1,7 @@
 package de.predic8.jpa.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -11,6 +13,7 @@ public class Post {
     private Long id;
     private String title;
     private String content;
+    @JsonBackReference
     @OneToOne
     private Author author;
     @OneToMany(mappedBy = "post")
