@@ -1,5 +1,3 @@
-#!groovy
-
 pipeline {
     agent any
     tools {
@@ -9,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               echo 'Hello World!'
+               sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
     }
