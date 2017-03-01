@@ -23,7 +23,7 @@ pipeline {
             agent any
             steps {
                 unstash 'jar'
-                sh 'mvn build-helper:attach-artifact@attach-artifacts jar:jar deploy:deploy'
+                echo 'Deploying to Artifactory'
             }
         }
         stage('UAT') {
@@ -31,6 +31,7 @@ pipeline {
             steps {
                 unstash 'jar'
                 input 'Deploy to UAT?'
+                echo 'Deploying to UAT...'
             }
         }
     }
