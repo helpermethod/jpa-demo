@@ -15,6 +15,13 @@ public class Author {
     @OneToMany(mappedBy = "author")
     private List<Post> posts;
 
+    protected Author() {
+    }
+
+    public Author(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
