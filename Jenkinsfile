@@ -19,13 +19,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                unstash 'jar'
                 echo 'Deploying to Artifactory'
             }
         }
         stage('UAT') {
             steps {
-                unstash 'jar'
                 input 'Deploy to UAT?'
                 echo 'Deploying to UAT...'
             }
