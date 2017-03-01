@@ -1,3 +1,5 @@
+#!groovy
+
 pipeline {
     agent none
     tools {
@@ -19,15 +21,15 @@ pipeline {
         }
         stage('Deploy') {
             agent any
-            unstash 'jar'
             steps {
+                unstash 'jar'
                 sh 'mvn build-helper:attach-artifact@attach-artifacts jar:jar deploy:deploy'
             }
         }
         stage('UAT') {
             agent any
-            unstash 'jar'
             steps {
+                unstash 'jar'
                 input 'Deploy to UAT?'
             }
         }
